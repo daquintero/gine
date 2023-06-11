@@ -26,8 +26,8 @@ export class HelloModel extends DOMWidgetModel {
         _view_name : 'HelloView',
         _model_module : 'gine',
         _view_module : 'gine',
-        _model_module_version : '0.0.2',
-        _view_module_version : '0.0.2',
+        _model_module_version : '0.0.3',
+        _view_module_version : '0.0.3',
         value : 'Hello World!'
       };
     }
