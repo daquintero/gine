@@ -1,6 +1,14 @@
 # gine
 
+[![PyPI Version](https://img.shields.io/pypi/v/gine.svg)](https://pypi.python.org/pypi/gine)
+[![Build Status](https://img.shields.io/travis/daquintero/gine.svg)](https://travis-ci.com/daquintero/gine)
+[![Documentation Status](https://readthedocs.org/projects/gine/badge/?version=latest)](https://gine.readthedocs.io/en/latest/?version=latest)
+[![Updates](https://pyup.io/repos/github/daquintero/gine/shield.svg)](https://pyup.io/repos/github/daquintero/gine/)
+
 Interactive netlist visualisation tools compatible with GDSFactory
+
+- Free software: MIT license
+- Documentation: [https://gine.readthedocs.io](https://gine.readthedocs.io)
 
 ## Installation
 
