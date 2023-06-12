@@ -1,4 +1,4 @@
-Welcome to gine's documentation!
+`gine`: Graphical Interactive Netlist!
 ======================================
 
 .. toctree::
@@ -8,10 +8,15 @@ Welcome to gine's documentation!
    readme
    installation
    usage
-   modules
+   integration
    contributing
    authors
    history
+
+
+..include:: /examples/get_started
+
+..include:: /autoapi/index
 
 Indices and tables
 ==================

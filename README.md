@@ -1,4 +1,4 @@
-# gine
+# `gine`
 
 [![PyPI Version](https://img.shields.io/pypi/v/gine.svg)](https://pypi.python.org/pypi/gine)
 [![Build Status](https://img.shields.io/travis/daquintero/gine.svg)](https://travis-ci.com/daquintero/gine)
