@@ -1,4 +1,4 @@
-import {HelloModel, HelloView, NetlistGraphModel, NetlistGraphView} from './index';
+import {HelloModel, HelloView, NetlistGraphModel, NetlistGraphView, version} from './index';
 import {IJupyterWidgetRegistry} from '@jupyter-widgets/base';
 
 export const ginePlugin = {

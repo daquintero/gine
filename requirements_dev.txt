@@ -20,6 +20,8 @@ nbsphinx
 myst_parser
 pandoc
 flake8
+ipyevents
+ipytree
 ipywidgets>=7.6.0,<9
 jupyter_packaging~=0.7.9
 jupyterlab~=3.0
