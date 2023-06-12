@@ -2,3 +2,4 @@
 
 export {HelloModel, HelloView} from './example';
 export {version} from '../package.json';
+export {NetlistGraphView, NetlistGraphModel} from './NetlistGraphWidget';

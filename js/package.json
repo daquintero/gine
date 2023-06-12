@@ -14,7 +14,8 @@
     "widgets",
     "ipython",
     "ipywidgets",
-    "jupyterlab-extension"
+    "jupyterlab-extension",
+    "gdsfactory"
   ],
   "files": [
     "lib/**/*.js",
