@@ -9,10 +9,11 @@ class NetlistGraph(widgets.DOMWidget):
     """
     Widget element that contains the javascript interactive netlist.
     """
-    _view_name = traitlets.Unicode('NetlistGraphView').tag(sync=True)
-    _model_name = traitlets.Unicode('NetlistGraphModel').tag(sync=True)
-    _view_module = traitlets.Unicode('gine').tag(sync=True)
-    _model_module = traitlets.Unicode('gine').tag(sync=True)
+
+    _view_name = traitlets.Unicode("NetlistGraphView").tag(sync=True)
+    _model_name = traitlets.Unicode("NetlistGraphModel").tag(sync=True)
+    _view_module = traitlets.Unicode("gine").tag(sync=True)
+    _model_module = traitlets.Unicode("gine").tag(sync=True)
     _view_module_version = traitlets.Unicode(NPM_PACKAGE_RANGE).tag(sync=True)
     _model_module_version = traitlets.Unicode(NPM_PACKAGE_RANGE).tag(sync=True)
 
@@ -24,7 +25,7 @@ class NetlistGraph(widgets.DOMWidget):
     value = netlist_graph_data
 
 
-def interactive_netlist_graph(gdsfactory_netlist:dict):
+def interactive_netlist_graph(gdsfactory_netlist: dict):
     """
     This function converts a GDSFactory netlist into a `gine` netlist, and then returns an interactive netlist widget.
     """

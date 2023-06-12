@@ -77,7 +77,7 @@ let create = function createForceGraph(dom,
     svgElmt.setAttribute('height', height);
     // append svg element to dom
     dom.el.appendChild(svgElmt);
-    dom.el.setAttribute('class', 'jupyter-widget qups_visual');
+    dom.el.setAttribute('class', 'jupyter-widget gine');
     const svg = d3.select(svgElmt);
     svg.attr("viewBox", [-width / 2, -height / 2, width, height])
         .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
@@ -97,7 +97,7 @@ let create = function createForceGraph(dom,
         .attr("stroke-width", typeof linkStrokeWidth !== "function" ? linkStrokeWidth : null)
         .attr("stroke-linecap", linkStrokeLinecap)
         .selectAll("line")
-        .data(links.filter(link => link.hierarchy >= 0))
+        .data(links)
         .join("line");
 
     const node = svg.append("g")
@@ -106,14 +106,14 @@ let create = function createForceGraph(dom,
         .attr("stroke-opacity", nodeStrokeOpacity)
         .attr("stroke-width", nodeStrokeWidth)
         .selectAll("circle")
-        .data(nodes.filter(node => node.hierarchy >= 0))
+        .data(nodes)
         .join("circle")
         .attr("r", nodeRadius)
         .call(drag(simulation));
 
     const textElements = svg.append('g')
         .selectAll('text')
-        .data(nodes.filter(node => node.hierarchy >= 0))
+        .data(nodes)
         .enter().append('text')
         .text(node => node.className)
         .attr('font-size', 15)
@@ -122,7 +122,7 @@ let create = function createForceGraph(dom,
 
     console.log(nodes);
     console.log(links);
-    console.log(nodes.filter(node => node.hierarchy == 0));
+    console.log(nodes);
     // console.log(links.filter(link => link.hierarchy == 0));
 
     if (W) link.attr("stroke-width", ({index: i}) => W[i]);
