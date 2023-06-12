@@ -1,17 +1,22 @@
-import {HelloModel, HelloView, version} from './index';
+import {HelloModel, HelloView, NetlistGraphModel, NetlistGraphView} from './index';
 import {IJupyterWidgetRegistry} from '@jupyter-widgets/base';
 
-export const helloWidgetPlugin = {
+export const ginePlugin = {
   id: 'gine:plugin',
   requires: [IJupyterWidgetRegistry],
   activate: function(app, widgets) {
       widgets.registerWidget({
           name: 'gine',
           version: version,
-          exports: { HelloModel, HelloView }
+          exports: { 
+            HelloModel,
+            HelloView,
+            NetlistGraphModel,
+            NetlistGraphView 
+          }
       });
   },
   autoStart: true
 };
 
-export default helloWidgetPlugin;
+export default ginePlugin;

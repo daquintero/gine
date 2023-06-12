@@ -1,7 +1,7 @@
 import ipywidgets as widgets
 import traitlets
 from ._version import NPM_PACKAGE_RANGE
-from .utils import convert_gdsfactory_netlist_to_gine_netlist
+from .utils import convert_gdsfactory_netlist
 
 
 @widgets.register
@@ -28,6 +28,6 @@ def interactive_netlist_graph(gdsfactory_netlist:dict):
     """
     This function converts a GDSFactory netlist into a `gine` netlist, and then returns an interactive netlist widget.
     """
-    netlist_graph_data = convert_gdsfactory_netlist_to_gine_netlist(gdsfactory_netlist)
+    netlist_graph_data = convert_gdsfactory_netlist(gdsfactory_netlist)
     netlist_graph_widget = NetlistGraph(netlist_graph_data=netlist_graph_data)
     return netlist_graph_widget
