@@ -11,3 +11,13 @@ gine/labextension/
 
 # OS X
 .DS_Store
+
+.ipynb_checkpoints/
+.idea/*
+build/
+dist/
+qups.egg-info/
+venv/
+unreleased/
+*__pycache__*
+*.gds*

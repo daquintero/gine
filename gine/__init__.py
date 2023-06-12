@@ -1,7 +1,8 @@
 from ._version import __version__
 
 from .example import *
-from .netlist_graph import NetlistGraph
+from .netlist_graph import NetlistGraph, interactive_netlist_graph
+from .utils import *
 
 def _jupyter_labextension_paths():
     """Called by Jupyter Lab Server to detect if it is a valid labextension and

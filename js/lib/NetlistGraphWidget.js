@@ -1,5 +1,5 @@
 import { DOMWidgetModel, DOMWidgetView } from '@jupyter-widgets/base';
-import {netlistGraph} from "./NetworkLatticeGraph";
+import {netlistGraph} from "./NetlistGraph";
 
 // See example.py for the kernel counterpart to this file.
 
