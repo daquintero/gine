@@ -2,7 +2,7 @@ import ipywidgets as widgets
 from traitlets import Unicode
 from ._version import NPM_PACKAGE_RANGE
 
-# See js/lib/example.js for the frontend counterpart to this file.
+# See js/src/example.js for the frontend counterpart to this file.
 
 @widgets.register
 class HelloWorld(widgets.DOMWidget):
