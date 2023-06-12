@@ -25,5 +25,6 @@ ipytree
 ipywidgets>=7.6.0,<9
 jupyter_packaging~=0.7.9
 jupyterlab~=3.0
+jupytext
 setuptools>=40.8.0
 wheel
