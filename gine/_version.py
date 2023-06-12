@@ -1,4 +1,4 @@
 # Module version
-__version__ = "0.0.6"
+__version__ = "0.0.7"
 
-NPM_PACKAGE_RANGE = "0.0.6"
+NPM_PACKAGE_RANGE = "0.0.7"
