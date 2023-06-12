@@ -1,6 +1,6 @@
 {
   "name": "gine",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Interactive netlist visualisation tools compatible with GDSFactory",
   "author": "Dario Quintero",
   "license": "BSD-3-Clause",
