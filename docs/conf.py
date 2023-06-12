@@ -19,6 +19,7 @@
 #
 import os
 import sys
+import jupytext
 
 sys.path.insert(0, os.path.abspath(".."))
 
@@ -98,6 +99,9 @@ mathjax3_config = {
     "tex": {"tags": "ams", "useLabelIds": True},
 }
 nbsphinx_allow_errors = True  # Continue through Jupyter errors
+nbsphinx_custom_formats = {
+    ".py": lambda s: jupytext.reads(s, ".py"),
+}
 version = gine.__version__
 
 latex_elements: dict = {
