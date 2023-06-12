@@ -7,7 +7,11 @@ prune **/node_modules
 
 include gine.json
 
+include AUTHORS.rst
+include CONTRIBUTING.rst
+include HISTORY.rst
 include LICENSE
+include README.md
 include setup.py
 include setup.cfg
 include pyproject.toml
