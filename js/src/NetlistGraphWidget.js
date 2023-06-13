@@ -42,10 +42,6 @@ export class NetlistGraphView extends DOMWidgetView {
     This class controls the functions that generate the view in the Jupyter notebook. It handles for example the refresh of the cell view, how the graph handles changing the python data, and the initial rendering.
      */
     render() {
-        console.log("Rendering network lattice");
-        console.log(this.model.get("netlist_graph_data"))
-        console.log(this.model.get("value"))
-
         let netlistGraphData = this.model.get("netlist_graph_data");
 
         // Create SVG of the D3 Graph Element
@@ -56,13 +52,11 @@ export class NetlistGraphView extends DOMWidgetView {
         window.dom = this.el;
         // Observe and act on future changes to the value attribute
         // this.model.on('change:value', this.value_changed, this);
-        console.log("Built network lattice");
     }
 
     value_changed() {
         let netlistGraphData = this.model.get("netlist_graph_data");
         netlistGraph.value_changed(this, netlistGraphData);
-        console.log("Changed network lattice");
     }
 }
 
