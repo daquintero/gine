@@ -53,6 +53,7 @@ def interactive_netlist_graph(gdsfactory_netlist: dict):
         layout=Layout(width="auto", height="auto"),
     )
     widget = gine_widget(
+        right_sidebar=right_button,
         center=netlist_graph_widget,
     )
     return widget

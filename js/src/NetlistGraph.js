@@ -7,34 +7,34 @@ import * as d3 from "d3"
 // https://observablehq.com/@d3/force-directed-graph
 let create = function createForceGraph(dom,
                                        {
-                        nodes, // an iterable of node objects (typically [{id}, …])
-                        links // an iterable of link objects (typically [{source, target}, …])
-                    }, {
-                        nodeClassName = node => node.className,
-                        nodeId = d => d.id, // given d in nodes, returns a unique identifier (string)
-                        nodeGroup, // given d in nodes, returns an (ordinal) value for color
-                        nodeGroups, // an array of ordinal values representing the node groups
-                        nodeHierarchy = node => node.hierarchy,
-                        nodeTitle, // given d in nodes, a title string
-                        nodeFill = "currentColor", // node stroke fill (if not using a group color encoding)
-                        nodeStroke = "#fff", // node stroke color
-                        nodeStrokeWidth = 1.5, // node stroke width, in pixels
-                        nodeStrokeOpacity = 1, // node stroke opacity
-                        nodeRadius = 5, // node radius, in pixels
-                        nodeStrength,
-                        linkHierarchy = link => link.hierarchy,
-                        linkSource = ({source}) => source, // given d in links, returns a node identifier string
-                        linkTarget = ({target}) => target, // given d in links, returns a node identifier string
-                        linkStroke = "#999", // link stroke color
-                        linkStrokeOpacity = 0.6, // link stroke opacity
-                        linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels
-                        linkStrokeLinecap = "round", // link stroke linecap
-                        linkStrength,
-                        colors = d3.schemeTableau10, // an array of color strings, for the node groups
-                        width = 640, // outer width, in pixels
-                        height = 400, // outer height, in pixels
-                        invalidation // when this promise resolves, stop the simulation
-                    } = {}) {
+                                           nodes, // an iterable of node objects (typically [{id}, …])
+                                           links // an iterable of link objects (typically [{source, target}, …])
+                                       }, {
+                                           nodeClassName = node => node.className,
+                                           nodeId = d => d.id, // given d in nodes, returns a unique identifier (string)
+                                           nodeGroup, // given d in nodes, returns an (ordinal) value for color
+                                           nodeGroups, // an array of ordinal values representing the node groups
+                                           nodeHierarchy = node => node.hierarchy,
+                                           nodeTitle, // given d in nodes, a title string
+                                           nodeFill = "currentColor", // node stroke fill (if not using a group color encoding)
+                                           nodeStroke = "#fff", // node stroke color
+                                           nodeStrokeWidth = 1.5, // node stroke width, in pixels
+                                           nodeStrokeOpacity = 1, // node stroke opacity
+                                           nodeRadius = 5, // node radius, in pixels
+                                           nodeStrength,
+                                           linkHierarchy = link => link.hierarchy,
+                                           linkSource = ({source}) => source, // given d in links, returns a node identifier string
+                                           linkTarget = ({target}) => target, // given d in links, returns a node identifier string
+                                           linkStroke = "#999", // link stroke color
+                                           linkStrokeOpacity = 0.6, // link stroke opacity
+                                           linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels
+                                           linkStrokeLinecap = "round", // link stroke linecap
+                                           linkStrength,
+                                           colors = d3.schemeTableau10, // an array of color strings, for the node groups
+                                           width = 640, // outer width, in pixels
+                                           height = 400, // outer height, in pixels
+                                           invalidation // when this promise resolves, stop the simulation
+                                       } = {}) {
     // Compute values.
     console.log('Rendering force graph');
     const nodeHierarchyMap = d3.map(nodes, nodeHierarchy).map(intern);
