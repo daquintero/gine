@@ -21,14 +21,7 @@ class NetlistGraph(widgets.DOMWidget):
     # Widget properties are defined as traitlets. Any property tagged with `sync=True`
     # is automatically synced to the frontend *any* time it changes in Python.
     # It is synced back to Python from the frontend *any* time the model is touched.
+    widget_width = traitlets.Integer().tag(sync=True)
+    widget_height = traitlets.Integer().tag(sync=True)
     netlist_graph_data = traitlets.Dict().tag(sync=True)
     value = netlist_graph_data
-
-
-def interactive_netlist_graph(gdsfactory_netlist: dict):
-    """
-    This function converts a GDSFactory netlist into a `gine` netlist, and then returns an interactive netlist widget.
-    """
-    netlist_graph_data = convert_gdsfactory_netlist(gdsfactory_netlist)
-    netlist_graph_widget = NetlistGraph(netlist_graph_data=netlist_graph_data)
-    return netlist_graph_widget

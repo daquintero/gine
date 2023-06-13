@@ -1,8 +1,10 @@
 from ._version import __version__
 
 from .example import *
-from .netlist_graph import NetlistGraph, interactive_netlist_graph
+from .netlist_graph import NetlistGraph
 from .utils import *
+from .gine_widget import gine_widget, interactive_netlist_graph
+
 
 def _jupyter_labextension_paths():
     """Called by Jupyter Lab Server to detect if it is a valid labextension and
@@ -17,10 +19,12 @@ def _jupyter_labextension_paths():
         from `src` directory into <jupyter path>/labextensions/<dest> directory
         during widget installation
     """
-    return [{
-        'src': 'labextension',
-        'dest': 'gine',
-    }]
+    return [
+        {
+            "src": "labextension",
+            "dest": "gine",
+        }
+    ]
 
 
 def _jupyter_nbextension_paths():
@@ -40,9 +44,11 @@ def _jupyter_nbextension_paths():
     require: Path to importable AMD Javascript module inside the
         <jupyter path>/nbextensions/<dest> directory
     """
-    return [{
-        'section': 'notebook',
-        'src': 'nbextension',
-        'dest': 'gine',
-        'require': 'gine/extension'
-    }]
+    return [
+        {
+            "section": "notebook",
+            "src": "nbextension",
+            "dest": "gine",
+            "require": "gine/extension",
+        }
+    ]

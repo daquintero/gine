@@ -33,5 +33,3 @@ gdsfactory_netlist = mzi.get_netlist()
 # ## Create Interactive Widget
 
 gine.interactive_netlist_graph(gdsfactory_netlist)
-
-

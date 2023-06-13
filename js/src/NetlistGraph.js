@@ -76,6 +76,7 @@ let create = function createForceGraph(dom,
     svgElmt.setAttribute('width', width);
     svgElmt.setAttribute('height', height);
     // append svg element to dom
+
     dom.el.appendChild(svgElmt);
     dom.el.setAttribute('class', 'jupyter-widget gine');
     const svg = d3.select(svgElmt);

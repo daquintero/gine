@@ -1,4 +1,4 @@
-`gine`: Graphical Interactive Netlist!
+`gine`: Graphical Interactive Netlist
 ======================================
 
 .. toctree::
@@ -14,9 +14,15 @@
    history
 
 
-..include:: /examples/get_started
+.. toctree::
+   :maxdepth: 2
+   :caption: Examples:
+    /examples/get_started
 
-..include:: /autoapi/index
+.. toctree::
+   :maxdepth: 2
+   :caption: API:
+    /autoapi/index
 
 Indices and tables
 ==================
