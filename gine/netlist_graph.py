@@ -21,7 +21,5 @@ class NetlistGraph(widgets.DOMWidget):
     # Widget properties are defined as traitlets. Any property tagged with `sync=True`
     # is automatically synced to the frontend *any* time it changes in Python.
     # It is synced back to Python from the frontend *any* time the model is touched.
-    # widget_width = traitlets.Integer().tag(sync=True)
-    # widget_height = traitlets.Integer().tag(sync=True)
     netlist_graph_data = traitlets.Dict().tag(sync=True)
     value = netlist_graph_data

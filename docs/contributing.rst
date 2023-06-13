@@ -1,4 +1,3 @@
-```shell
 ============
 Contributing
 ============
@@ -59,46 +58,36 @@ Get Started!
 Ready to contribute? Here's how to set up `piel` for local development.
 
 1. Fork the `piel` repo on GitHub.
-2. Clone your fork locally:
+2. Clone your fork locally::
 
-    ```shell
     $ git clone git@github.com:your_name_here/piel.git
-    ```
 
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development:
+3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
-    ```shell
     $ mkvirtualenv piel
     $ cd piel/
     $ python setup.py develop
-    ```
 
-4. Create a branch for local development:
+4. Create a branch for local development::
 
-    ```shell
     $ git checkout -b name-of-your-bugfix-or-feature
-    ```
 
    Now you can make your changes locally.
 
 5. When you're done making changes, check that your changes pass flake8 and the
-   tests, including testing other Python versions with tox:
+   tests, including testing other Python versions with tox::
 
-    ```shell
     $ flake8 piel tests
     $ python setup.py test or pytest
     $ tox
-    ```
 
    To get flake8 and tox, just pip install them into your virtualenv.
 
-6. Commit your changes and push your branch to GitHub:
+6. Commit your changes and push your branch to GitHub::
 
-    ```shell
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
-    ```
 
 7. Submit a pull request through the GitHub website.
 
@@ -118,7 +107,6 @@ Before you submit a pull request, check that it meets these guidelines:
 Tips
 ----
 
-To run a subset of tests:
+To run a subset of tests::
 
-```shell
-$ pytest tests.test_piel
+    $ pytest tests.test_piel

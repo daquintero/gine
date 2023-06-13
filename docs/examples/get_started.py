@@ -33,3 +33,18 @@ gdsfactory_netlist = mzi.get_netlist()
 # ## Create Interactive Widget
 
 gine.interactive_netlist_graph(gdsfactory_netlist)
+
+# ## Example Multi-Component Netlist
+
+example_component_lattice = [
+    [gf.components.mzi2x2_2x2(), 0, gf.components.mzi2x2_2x2()],
+    [0, gf.components.mzi2x2_2x2(), 0],
+    [gf.components.mzi2x2_2x2(), 0, gf.components.mzi2x2_2x2()],
+]
+c = gf.components.generic_component_lattice(example_component_lattice)
+c
+
+gcl_netlist = c.get_netlist()
+gine.interactive_netlist_graph(gcl_netlist)
+
+
