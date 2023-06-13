@@ -29,8 +29,8 @@ export class NetlistGraphModel extends DOMWidgetModel {
         _view_name : 'NetlistGraphView',
         _model_module : 'gine',
         _view_module : 'gine',
-        _model_module_version : "0.0.8",
-        _view_module_version : "0.0.8",
+        _model_module_version : "0.0.9",
+        _view_module_version : "0.0.9",
         value : {"nodes": [], "links": []},
         netlist_graph_data : {"nodes": [], "links": []}
       };
