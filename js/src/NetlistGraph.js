@@ -6,16 +6,26 @@ let create = function createForceGraph(dom,
                                            nodes, // an iterable of node objects (typically [{id}, …])
                                            links // an iterable of link objects (typically [{source, target}, …])
                                        }, {
+                                        // width,
+                                        // height,
                                        } = {}) {
 
     dom.el.setAttribute('class', 'jupyter-widget gine');
-    dom.el.setAttribute("style", "max-width: 100%; height: auto; height: intrinsic;")
+    // dom.el.setAttribute("style", "max-width: 100%; height: auto; height: intrinsic;");
+
+/*    let width = dom.el.width;
+    let height = dom.el.height;*/
+
 
     let graph = ForceGraph()
     (dom.el)
-        .width(dom.width)
-        .height(dom.height)
+        // .width(width)
+        // .height(height)
         .graphData({nodes, links});
+
+    // dom.el.addEventListener('resize', function(event) {
+    //     graph(dom.el).width(dom.el.width).height(dom.el.height);
+    // }, true);
 
     return dom;
 }
