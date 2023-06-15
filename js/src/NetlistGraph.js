@@ -1,21 +1,26 @@
 // import * from "force-graph"
-import ForceGraph from "force-graph";
+
 
 let create = function createForceGraph(dom,
                                        {
                                            nodes, // an iterable of node objects (typically [{id}, …])
                                            links // an iterable of link objects (typically [{source, target}, …])
                                        }, {
+                                        width,
+                                        height,
                                        } = {}) {
 
     dom.el.setAttribute('class', 'jupyter-widget gine');
 
-    let graph = ForceGraph()
-    (dom.el)
-        .graphData({nodes, links});
 
+    // let graph = ForceGraph()
+    // (dom.el)
+    //     .graphData({nodes, links});
+    console.log("width");
+    console.log(width);
+    console.log(height);
 
-    return dom;
+    // return do
 }
 
 let value_changed = function (dom, netlistGraphData) {

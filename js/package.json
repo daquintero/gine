@@ -46,7 +46,6 @@
     "@jupyter-widgets/controls": "^1.0.0",
     "@jupyter-widgets/jupyterlab-manager": "^0.28.0",
     "d3": "^7.8.4",
-    "force-graph": "^1.43.1",
     "lodash": "^4.17.4"
   },
   "jupyterlab": {
